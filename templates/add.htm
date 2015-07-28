@@ -1,0 +1,13 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Add paste</title>
+	</head>
+	<body>
+		{% if paste_id %}
+		<a href="/paste/{{paste_id}}">{{paste_id}}</a>
+		{% else %}
+		<p>Unknown error</p>
+		{% endif %}
+	</body>
+</html>
