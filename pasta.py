@@ -21,7 +21,7 @@ def hello(page_name=None):
 	        filename=hashlib.md5(paste).hexdigest()
 	        paste_file = open('static/'+filename, 'w+')
 	        paste_file.write(paste)
-	        return request.url_root+filename
+	        return request.url_root+filename+'\n'
 	else:
 	    return render_template('main.htm', page_name=page_name)
 @app.route("/<id>")
